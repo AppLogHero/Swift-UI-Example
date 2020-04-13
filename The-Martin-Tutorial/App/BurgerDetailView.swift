@@ -10,6 +10,8 @@ import SwiftUI
 
 struct BurgerDetailView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var burger: Burger
     
     var body: some View {
@@ -24,18 +26,28 @@ struct BurgerDetailView: View {
                     .scaledToFill()
                     .frame(width: 150, height: 150)
             }
-            VStack {
+            VStack(alignment: .center) {
                 Text(burger.name)
                     .font(Font.system(size: 32))
                     .fontWeight(.black)
                     .padding(.top, 28)
-                    .padding(.leading, 16)
                 Text(burger.description)
                     .padding(.top, 8)
-                    .padding(.leading, 26)
+                    .padding(.leading, 16)
+                    .padding(.trailing, 16)
+                    .font(Font.system(size: 14))
             }
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }, label: {
+            Image("BACK")
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(.black)
+        }))
     }
 }
 
