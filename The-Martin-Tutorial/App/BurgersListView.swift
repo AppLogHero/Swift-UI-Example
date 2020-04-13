@@ -21,6 +21,10 @@ struct BurgersListView: View {
         self.burgers.append(Burger(id: UUID().uuidString, name: "280", imageName: "280"))
     }
     
+    private func deleteBurger(at offsets: IndexSet) {
+        self.burgers.remove(atOffsets: offsets)
+    }
+    
     var body: some View {
         NavigationView {
             List {
@@ -37,13 +41,21 @@ struct BurgersListView: View {
                         }
                     })
                 }
+                .onDelete(perform: deleteBurger(at:))
             }
             .navigationBarTitle("Burgers")
             .navigationBarItems(trailing: Button(action: {
                 self.addBurger()
             }, label: {
-                Image(systemName: "plus")
-                    .foregroundColor(.black)
+                Group {
+                    Image(systemName: "plus")
+                        .foregroundColor(.black)
+                        .environment(\.colorScheme, .light)
+                    
+                    Image(systemName: "plus")
+                        .foregroundColor(.white)
+                        .environment(\.colorScheme, .dark)
+                }
             }))
         }
     }

@@ -11,6 +11,7 @@ import SwiftUI
 struct BurgerDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.colorScheme) var colorScheme
     
     var burger: Burger
     var burgers: [Burger]
@@ -59,7 +60,7 @@ struct BurgerDetailView: View {
                 Image("BACK")
                     .resizable()
                     .scaledToFit()
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .light ? .black : .white)
             }))
         }
     }
