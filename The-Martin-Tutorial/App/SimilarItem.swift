@@ -12,6 +12,7 @@ struct SimilarItem: View {
     
     var burger: Burger
     
+    //View body
     var body: some View {
         VStack {
             Image(burger.imageName)

@@ -10,14 +10,20 @@ import SwiftUI
 
 struct BurgerDetailView: View {
     
+    //Environment object for use dismiss() func with custom back navbar button
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    //Environment object for use colorScheme object (darkMode)
     @Environment(\.colorScheme) var colorScheme
-    
+
+    //Burger attribute
     var burger: Burger
+    //Burgers list attribute
     var burgers: [Burger]
     
+    //View body
     var body: some View {
         ScrollView {
+            //ScrollView content configuration
             VStack(alignment: .leading) {
                 ZStack() {
                     Image("burger-detail-background")
@@ -41,6 +47,7 @@ struct BurgerDetailView: View {
                         .font(Font.system(size: 14))
                 }
                 
+                //Horizontal scrollView for display list of burger
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(burgers, id: \.id) { burger in
@@ -53,8 +60,10 @@ struct BurgerDetailView: View {
                 
                 Spacer()
             }
+            //Navigationbar configuration
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action: {
+                //Back action
                 self.presentationMode.wrappedValue.dismiss()
             }, label: {
                 Image("BACK")

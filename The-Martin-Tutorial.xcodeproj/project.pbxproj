@@ -10,7 +10,6 @@
 		B45FC53F2444C70900072226 /* SimilarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45FC53E2444C70900072226 /* SimilarItem.swift */; };
 		B4BAF7F12444A86A004258FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BAF7F02444A86A004258FD /* AppDelegate.swift */; };
 		B4BAF7F32444A86A004258FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BAF7F22444A86A004258FD /* SceneDelegate.swift */; };
-		B4BAF7F52444A86A004258FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BAF7F42444A86A004258FD /* ContentView.swift */; };
 		B4BAF7F72444A86E004258FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4BAF7F62444A86E004258FD /* Assets.xcassets */; };
 		B4BAF7FA2444A86E004258FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4BAF7F92444A86E004258FD /* Preview Assets.xcassets */; };
 		B4BAF7FD2444A86E004258FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4BAF7FB2444A86E004258FD /* LaunchScreen.storyboard */; };
@@ -43,7 +42,6 @@
 		B4BAF7ED2444A86A004258FD /* The-Martin-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Martin-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BAF7F02444A86A004258FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4BAF7F22444A86A004258FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4BAF7F42444A86A004258FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B4BAF7F62444A86E004258FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4BAF7F92444A86E004258FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4BAF7FC2444A86E004258FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				B4BAF8292444BDA0004258FD /* Utils */,
-				B4BAF8202444B03B004258FD /* Stacks */,
 				B4BAF8262444BD7E004258FD /* Models */,
 				B4BAF8212444B05B004258FD /* App */,
 				B4BAF7F82444A86E004258FD /* Preview Content */,
@@ -140,14 +137,6 @@
 				B4BAF8142444A86E004258FD /* Info.plist */,
 			);
 			path = "The-Martin-TutorialUITests";
-			sourceTree = "<group>";
-		};
-		B4BAF8202444B03B004258FD /* Stacks */ = {
-			isa = PBXGroup;
-			children = (
-				B4BAF7F42444A86A004258FD /* ContentView.swift */,
-			);
-			path = Stacks;
 			sourceTree = "<group>";
 		};
 		B4BAF8212444B05B004258FD /* App */ = {
@@ -317,7 +306,6 @@
 				B4BAF7F12444A86A004258FD /* AppDelegate.swift in Sources */,
 				B4BAF8252444B703004258FD /* BurgerDetailView.swift in Sources */,
 				B4BAF7F32444A86A004258FD /* SceneDelegate.swift in Sources */,
-				B4BAF7F52444A86A004258FD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
